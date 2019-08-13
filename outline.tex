@@ -25,6 +25,7 @@
 \newcommand{\hint}[1]{\textsf{（#1）}}
 \newcommand{\minor}[1]{{\color{gray} #1}}
 \newcommand{\then}{$\to$}
+\newcommand{\equv}{$\Leftrightarrow$}
 \newcommand{\beginday}{2019 年 6 月 30 日}
 \renewcommand{\emph}[1]{\faIcon[regular]{lightbulb}\ \textbf{#1}}
 
@@ -197,6 +198,91 @@
 \end{itemize}
 
 \section{平面连杆机构}
+\begin{itemize}\tightlist
+    \item 定义：若干刚性构件、用低副连接、各构件做平面运动。
+    \item 优点：实现多种运动形式\hint{整周转动、摆动、移动}转换；实现复杂运动轨迹；磨损
+    轻；形状简单、制造方便。
+    \item 缺点：只能近似实现运动要求；设计复杂；惯性力难以平衡，振动与动载荷明显，只能
+    用于低速。
+\end{itemize}
+
+\subsection{平面连杆机构大赏}
+\begin{itemize}\tightlist
+    \item 基本形式：两杆机构\hint{不能转换运动}\then 三杆机构\hint{无自由度}\then
+    四杆机构\hint{基本形式}
+    \item 铰链四杆机构：最基本的平面四杆机构，全由转动副连接。
+    \begin{itemize}\tightlist
+        \item 曲柄摇杆机构：等速整圈转动\equv 变速往复摆动；实例：颚式破碎机、缝纫机
+        脚踏板。
+        \item 双曲柄机构：等速转动\then 变速转动\hint{可以实现较大的力与急回特性}；
+        特例：平行四边形机构\hint{火车}、反平行四边形机构\hint{门窗启闭装置}。
+        \item 双摇杆机构：匀速摆动\then 变速摆动；特例：等腰梯形机构\hint{前轮转向机构}。
+    \end{itemize}
+    \item 连杆运动轨迹：连杆曲线\hint{代数曲线}。
+    \item \emph{连架杆的运动轨迹无意义，都是圆弧。}
+    \item 铰链四杆机构的演化：
+    \begin{itemize}\tightlist
+        \item 变换构件形状：
+        \begin{enumerate}\tightlist
+            \item 曲柄滑块机构：转动\then 平动\footnote{一般不反过来，因为会卡在死点。
+            }，分对心与偏置；实例：内燃机。
+            \item 双滑块机构：平动\then 平动；实例：椭圆规。
+            \item \minor{余弦机构：常用于计算装置中。}
+        \end{enumerate}
+        \item 变更机架位置：
+        \begin{enumerate}\tightlist
+            \item 曲柄滑块机构\then 导杆机构\hint{机架：原曲柄}\minor{\then 摇块机构
+            \hint{机架：原连杆}\then 定块机构\hint{机架：原滑块}}。
+            \item \minor{双滑块机构\then 正弦机构\hint{机架：原滑块}\then 双转块机构
+            \hint{机架：原连杆}。}
+        \end{enumerate}
+        \item 扩大转动副：曲柄滑块机构\then 偏心轮机构\hint{可提高强度与刚度}。
+    \end{itemize}
+\end{itemize}
+
+\subsection{四杆机构分析与设计}
+\begin{itemize}\tightlist
+    \item \emph{原动机\hint{如电机}是整周转动，故希望四杆机构中存在曲柄。}
+    \item 四杆机构曲柄存在条件：
+    \begin{enumerate}\tightlist
+        \item 最短杆长度$+$最长杆长度$\leq$其余两杆长度之和\hint{长杆不能太长}。
+        \item 连架杆与机架之中必有一个是最短杆\hint{最短杆不是连杆；不做梯形机构}。
+    \end{enumerate}
+    \item 满足第一条件后，取连架杆为最短杆得曲柄摇杆机构，取机架为最短杆得双曲柄机构，
+    否则得双摇杆机构。
+    \item 极限位置：往复运动\hint{摆动、移动}构件的两个极端位置；摆角$\psi$\hint{对
+    摇杆}与极位夹角$\theta$\hint{对曲柄，总是锐角}。
+    \item 行程速比系数：$K=\frac{\omega_R}{\omega_W}=\frac{\SI{180}\degree+\theta}%
+    {\SI{180}\degree-\theta}>1$。
+    \item 设计极位夹角：$\theta=\SI{180}\degree\cdot\frac{K-1}{K+1}<\SI{180}\degree$。
+    \item 压力角$\alpha$\hint{对从动件}：受力点处，载荷\hint{外力}方向与速度方向夹角；
+    传动角$\gamma$\hint{仅对连杆机构}：连杆与从动件所夹锐角。
+    \begin{itemize}\tightlist
+        \item 压力角越小，机构传力效果越好。 
+        \item 传动角与压力角换算：$\gamma=\SI{90}\degree-\alpha$。
+        \item 传动角测量：连杆与从动件夹角为$\gamma'$，则当$\gamma'\leq\SI{90}\degree$
+        时$\gamma=\gamma'$，$\gamma'>\SI{90}\degree$时$\gamma=\SI{180}\degree-
+        \gamma'$。
+    \end{itemize}
+    \item 最小传动角$\gamma_\text{min}$：衡量机构传力效果下限；计算按
+    \[\gamma_\text{min}=\min\{\gamma'_\text{min},\SI{180}\degree-\gamma'_\text{max}\}.\]
+    \item \emph{在学习与备考过程中，用作图测量法而非余弦定理求解最小传动角。}
+    \item 死点：$\gamma=0$的位置；出现于摇杆作主动件时，连杆与曲柄成直线；出现机构自锁
+    或反转现象。
+    \item \minor{死点的克服：利用构件惯性或其他机构辅助；死点的利用：分合闸、机床上的
+    夹紧装置。}
+    \item 运动连续性：检验机构是否能通过运动\hint{而非在静止时}到达指定位置。
+    \item 平面连杆机构运动设计命题：
+    \begin{itemize}
+        \item 刚体引导问题：要求实现几个给定位置。
+        \item 要求实现给定的运动规律\hint{达成给定的急回特性$K$}。
+        \item \minor{要求实现给定轨迹\hint{连杆曲线}。}
+        \item 附加要求：存在曲柄、运动连续性、$\gamma_\text{min}\geq[\gamma]$\minor%
+        {、尺寸符合要求}。
+    \end{itemize}
+    \item 设计方法：图解法\minor{、实验法\hint{图谱或模型}、解析法}。
+    \item 图解常用技巧：作圆弧、作中垂线、利用圆心角/圆周角。
+\end{itemize}
 
 \section{凸轮机构}
 
