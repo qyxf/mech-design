@@ -1,0 +1,716 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[heading,hyperref]{ctex}
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\setCJKmainfont{思源宋体}
+\setCJKsansfont{思源黑体}
+\setmainfont{Cambria}
+\setsansfont{Calibri}
+\setmathfont{Cambria Math}
+
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\lhead{}\rhead{}
+\chead{\textsc{Outline on Fundamentals of Mechanical Design}}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{0}
+\setlength{\headheight}{15pt}
+
+\usepackage{siunitx}
+\usepackage{fontawesome5}
+
+\newcommand{\tightlist}{\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}}
+\newcommand{\hint}[1]{\textsf{（#1）}}
+\newcommand{\minor}[1]{{\color{gray} #1}}
+\newcommand{\then}{$\to$}
+\newcommand{\beginday}{2019 年 6 月 30 日}
+\renewcommand{\emph}[1]{\faIcon[regular]{lightbulb}\ \textbf{#1}}
+
+\title{《机械设计基础》考点提纲}
+\date{\beginday--\today}
+\author{黑山雁}
+
+\begin{document}
+\maketitle
+
+\section{绪论与概述}
+\subsection{基本概念}
+\begin{itemize}\tightlist
+    \item 机器：执行机械运动的装置\hint{人为实体组合、确定相对运动、功能转换或做有用功}。
+    \item 机构：只有运动变换，没有能量转换；机器的运动部分\hint{剔除了与运动无关的因素}。
+    \item 构件：运动的单元体；零件：加工制造的单元体\hint{注意区分}。
+    \item \minor{机械：机器与机构的总称。}
+\end{itemize}
+
+\subsection{设计原则}
+\begin{itemize}\tightlist
+    \item 传统设计方法：依靠基础物理与经验汇总；现代设计方法：计算机辅助、优化、可靠性
+    设计。
+    \item \hint{零件}失效：不能在预定条件、预定期限下正常工作；工作能力：抵抗失效的能力。
+    \item \minor{功能分析：总功能\then 功能元\then 功能载体\hint{机构、零件}；原理分析
+    ：形态学矩阵，择优选取。}
+    \item 机械设计基本要求：
+    \begin{enumerate}\tightlist
+        \item 功能要求：实现预定功能，不失效。
+        \item 可靠性要求：减少零件数目。\emph{零件越多，可靠度越低。}
+        \item 经济性要求：能用便宜的，就不用贵的。
+        \item \minor{操作方便和安全要求。}
+        \item \minor{造型、色彩要求。}
+    \end{enumerate}
+    \item 零件设计一般程序\hint{之后各章遵循的逻辑}：
+    \begin{enumerate}\tightlist
+        \item 初选结构形式、选择零件类型\hint{读型号，分析需求，结合零件特点查表选型}。
+        \item 计算作用在零件上的载荷\hint{受力、应力分析}。
+        \item 选择零件材料及热处理方式\hint{“工程材料基础”、“金工实习”}。
+        \item 零件工作能力设计\hint{强度、刚度、疲劳、振动、热平衡}。
+        \item 零件结构设计\hint{尺寸、形状}。
+        \item 校核计算\hint{确定一个，核另一个}。
+        \item \minor{绘制零件工作图、编写设计计算说明书}。
+    \end{enumerate}
+    \item 三种设计：开发性设计\hint{创新}、适应性设计\hint{改进}、变型设计\hint{改参数}。
+\end{itemize}
+
+\section{运动设计基础}
+
+\section{工作能力与结构设计基础}
+
+\section{平面连杆机构}
+
+\section{凸轮机构}
+
+\section{齿轮传动}
+
+\section{蜗杆传动}
+
+\section{轮系}
+
+\section{带传动}
+\subsection{总述}
+\begin{itemize}\tightlist
+    \item 带传动的三个组成部分；刚性传动与挠性传动；两类带传动。
+    \item 三类主要传动形式\hint{及适用的速度范围}；四种带\hint{形状、实际工作面、优缺点}。
+    \item 当量摩擦因数\hint{谁的？计算公式、含义}。
+    \item 五个主要几何参数、它们的关系\hint{近似计算公式}。
+    \item 带传动的六个特点\hint{减震、打滑、效率、结构与寿命、尺寸、传动比}；应用范围
+    \hint{功率、带速}。
+\end{itemize}
+
+\subsection{V带与带轮}
+\begin{itemize}\tightlist
+    \item 三种V带；V带的组成\hint{四个部分}。
+    \item 普通V带的参数\hint{型号——四项几何尺寸}；轮槽楔角\hint{与V带楔角的关系}。
+    \item 带的节面\hint{定义}与带轮基准直径。
+    \item \minor{另两种V带的应用场合\hint{功率、尺寸、工况}。}
+    \item \minor{带轮的设计要求\hint{质量、安装、平衡性、表面}；}带轮材料
+    \hint{与速度关系}；\minor{四种结构形式\hint{及选用依据}。}
+\end{itemize}
+
+\subsection{工作原理}
+\begin{itemize}\tightlist
+    \item 基本工作原理\hint{带轮如何驱动}；二力相抗原理\hint{哪两个力？随载荷加大的变
+    化趋势}；带传动设计的主要问题。
+    \item 张紧力、初拉力$F_0$；紧边与松边\hint{识别、形成原理}；紧边拉力$F_1$、松边
+    拉力$F_2$\hint{方向、大小关系}；不变形条件\footnote{经常被遗忘。}
+    \hint{$F_0$、$F_1$、$F_2$的等式}；有效工作拉力$F_e$、摩擦力$F'$\hint{关系、平衡
+    原理、计算公式}；打滑原理\hint{谁顶不住了？}。
+    \item \emph{一般总是小带轮发生打滑，其包角应尽可能的大。}
+    \item 欧拉公式\hint{$F_1=F_2\mathrm{e}^{f\alpha}$，说了什么？}；最大有效工作
+    拉力$F_{ec}$\hint{计算公式，从$F_1$到$F_0$}；打滑位点\hint{大或小？}。
+    \item 避免打滑的三点原则\hint{来自于$F_{ec}$的计算公式}；\minor{为什么铸铁优于
+    钢。}
+    \item 三种应力：拉应力\hint{估算方法}；弯曲应力\hint{估算方法、谁大？}；离心拉应力
+    \hint{均匀、估算方法}；应力分布规律\hint{绘出示意图}；应力最大点；带的疲劳强度条件。
+    \item 弹性滑动\hint{形成原理、方向}；速度不等式$v_1>v_\text{带}>v_2$\hint{为什
+    么？}；滑动率\hint{计算公式、大致数值}；传动比不恒定\hint{计算公式}；弹性滑动的
+    影响\hint{效率、发热、速度}。
+    \item 滑动弧、静弧；打滑与滑动弧的关系；打滑的危害\hint{磨损、发热、速度、传动}。
+\end{itemize}
+
+\subsection{校核与设计}
+\begin{itemize}\tightlist
+    \item 四种失效形式\hint{打滑、疲劳、磨损、\minor{带轮断裂}}；主要设计依据
+    \hint{“一个保证，一个足够”}。
+    \item 强度计算方法\hint{基本条件、$[\sigma]$条件\then 关于$F_e$的条件\then 功率
+    条件}；最佳带速\hint{功率随速度的变化规律}；基本额定功率$P_0$\hint{条件、表格构成}。
+    \item 一般条件下的功率校核：额定功率$[P]=(P_0+\Delta P_0)K_\alpha K_L$，其中
+    $\Delta P_0=K_bn_1(1-1/K_i)$\hint{各项含义、随相关参数的变化规律、表格构成}。
+    \item 设计计算步骤：
+    \begin{enumerate}\tightlist
+        \item 条件\hint{工况、带速或传动比、功率}；
+        \item 计算功率$P_d=K_AP$\hint{含义}；
+        \item 初选型号\hint{查图}；
+        \item 确定带轮基准直径\hint{小带轮查表过限，大带轮按传动比圆整}；
+        \item 验算带速\hint{多少为宜}；
+        \item 确定$a$及$L_d$\hint{不等式初选$a$，估算$L_d$并查表圆整，再近似反算$a$}；
+        \item 验算小带轮包角\hint{公式；一般要求}；
+        \item 确定根数$z$\hint{计算载荷、额定功率}；
+        \item 计算初拉力$F_0$\hint{公式}；
+        \item 计算压轴力$F_P$\hint{受力分析，导出公式}。
+    \end{enumerate}
+    \item \minor{张紧装置设计\hint{滑道、摆架、重力自动张紧、张紧轮}。}
+    \item 使用与维护原则\hint{同心平行对中；带在轮槽中的位置；成组时尺寸均匀……}。
+\end{itemize}
+
+\section{间歇传动机构}
+\subsection{棘轮机构}
+\begin{itemize}\tightlist
+    \item 组成部分\hint{摇杆、棘爪、棘轮、止回爪、机架}；运动原理\hint{摆动“拖刀”}；
+    转换方向\hint{摆动\then 间歇转动}。
+    \item 分类：齿式/摩擦式、单向/可换向、外啮合/内啮合、齿式/双动式。
+    \item 特点：
+    \begin{itemize}\tightlist
+        \item 齿式：工作可靠，精度高；有硬冲，噪声、磨损严重。
+        \item 摩擦式：工作平稳，无级调整；精度差。
+    \end{itemize}
+    \item 应用场合：转位分度与送进\hint{牛头刨刀}、止动\hint{起重}、超越离合器\hint{
+    自行车后轴——原理}。
+    \item 齿式棘轮机构设计：模数$m=\frac{d_a}{z}$\hint{基准在齿顶圆上}，齿数$z$
+    \hint{按分度确定，一般取$8\sim60$}，轮齿倾斜角$\alpha$\hint{条件$\alpha>\varphi$
+    ，一般取$\alpha=\SI{20}{\degree}$}。
+\end{itemize}
+
+\subsection{槽轮机构}
+\begin{itemize}\tightlist
+    \item 组成部分\hint{拨盘、槽轮}；运动原理；转换方向\hint{连续转动\then 间歇不等速
+    转动}。
+    \item 分类：外槽轮/内槽轮\hint{记住形状}。
+    \item 特点：工作可靠且较平稳，效率高；有柔冲，分度难调整\hint{受工艺限制，槽数不宜
+    过多}。
+    \item 运动分析与设计准则：
+    \begin{itemize}\tightlist
+        \item 运动系数：$k=\frac{\text{运动时间}}{\text{总时间}}$，外槽轮$k=\frac12
+        -\frac1z<0.5$，内槽轮$k=\frac12+\frac1z>0.5$。
+        \item 意义：若要使外槽轮$k>0.5$，应采用$n>1$个拨销使$k=n\left(\frac12-\frac%
+        1z\right)>0.5$\hint{但不能超过$1$，由此可解出$n$的最大值}；增大$z$也可适当增加
+        运动系数；单拨销外槽轮的$z>3$才能正常运转\hint{否则$k\leq0$}。
+        \item 齿数设计：一般取$z=4,6,8$。
+        \item \minor{运动特性：槽轮转动非等速；角速度与角加速度取决于$z$。}
+    \end{itemize}
+\end{itemize}
+
+\subsection{不完全齿轮机构}
+\begin{itemize}\tightlist
+    \item 组成部分\hint{两轮；凹/凸锁止弧}；运动原理\hint{有齿时啮合传动，无齿时锁止}；
+    转换方向\hint{连续转动\then 间歇等速转动}。
+    \item 分类：外啮合、内啮合。
+    \item 特点：结构简单、分度设计灵活、精度高；有硬冲\hint{继承于齿轮，可用附加杆装置
+    减缓冲击}。
+\end{itemize}
+
+
+\section{机械系统动力学}
+\begin{itemize}\tightlist
+    \item 三大问题：机械真实运动；飞轮调节波动；转子平衡问题。
+    \item \minor{原理部分：设计的灵魂。}
+    \item \minor{现代设计方法：以动力学设计囊括静态设计。}
+\end{itemize}
+
+\subsection{机械真实运动分析}
+\begin{itemize}\tightlist
+    \item 作用在机械上的力：\minor{重力、惯性力、约束反力、摩擦力、}驱动力、工作阻力
+    \footnote{摩擦力并不被视为工作阻力，而被视为“有害阻力”。}
+    \item 力的机械特性：力--运动参数\hint{机械特性曲线}
+    \item 常见机械特性：
+    \begin{itemize}\tightlist
+        \item 驱动力：常数\hint{液压活塞}、位置函数\hint{内燃机}、速度函数\hint{电动机}
+        \item 工作阻力：常数\hint{起重机}、位置函数\hint{压缩机}、速度函数\hint%
+        {鼓风机、离心泵}、时间函数\hint{破碎机}。
+        \item \minor{特性的确定：其他课程中解决。}
+    \end{itemize}
+    \item 机械运动的阶段\hint{三个}：启动、稳定运动\hint{主动件保持常速或周期波动——
+    匀速稳定运动、变速稳定运动}、停车；正常工作速度
+    \item 功能分析：$W_a-W_c=\frac12\Delta\sum(m_iv_{c_i}^2+J_{c_i}\omega^2)$；
+    分阶段情况\hint{$W_a-W_c>0$\then$=0$\then$<0$}。
+    \item 等效动力学模型：等效构件、等效力\hint{或力矩}、等效质量\hint{或转动惯量}；
+    分析方法：功率相等原则、动能相等原则；其他事项\hint{常将$F_a$与
+    $F_c$分开分析}。
+    \begin{gather}
+    \left\{
+    \begin{aligned}
+    F_\text{v}&=\sum_iF_i\frac{v_i\cos\alpha_i}{v}+\sum_i\left(\pm M_i\frac%
+    {\omega_i}{v}\right)\\
+    m_\text{v}&=\sum_i\left[m_i\left(\frac{v_{c_i}}{v}\right)^2+J_{c_i}\left(
+    \frac{\omega_i}{v}\right)^2\right]
+    \end{aligned}\right.\\\left\{
+    \begin{aligned}
+    M_\text{v}&=\sum_iF_i\frac{v_i\cos\alpha_i}{\omega}+\sum_i\left(\pm M_i
+    \frac{\omega_i}{\omega}\right)\\
+    J_\text{v}&=\sum_i\left[m_i\left(\frac{v_{c_i}}{\omega}\right)^2+J_{c_i}\left(
+    \frac{\omega_i}{\omega}\right)^2\right]
+    \end{aligned}\right.
+    \end{gather}
+    \item 等效分析的结果\hint{速度比的函数，仅与位置有关；不等于简单的求和\minor{，除非
+    ……}}。
+    \item 等效分析的意义：使系统仅剩一个自由度，便于求解。
+    \begin{equation}
+    F_\text{v}=m_v\frac{\mathrm{d}v}{\mathrm{d}t}
+    \end{equation}
+\end{itemize}
+
+\subsection{速度波动与飞轮设计}
+\begin{itemize}\tightlist
+    \item 调速原理：增大构件的质量或转动惯量\then 安装飞轮\hint{起水库之用}；飞轮的
+    影响\hint{降低速度波动幅值、减少原动机输出功率；延长启动与制动时间}。
+    \item \emph{一般将飞轮装在高速轴上，可减轻飞轮的质量及尺寸。}
+    \item 平均角速度$\omega_m$：实际平均角速度\hint{积分平均}与算术平均角速度；不均匀
+    系数$\delta=\frac{\omega_\text{max}-\omega_\text{min}}{\omega_\text{m}}$及
+    许用不均匀系数$[\delta]$\hint{大致量级；利用$[\delta]$反求速度波动许可值}
+    \item 飞轮设计原理：计算$J_F\approx J_\text{v}$\hint{飞轮比机械自身转动惯量大
+    很多}，保证由
+    \begin{equation}
+    W_y=\int_{\varphi_{E_\text{min}}}^{\varphi_{E_\text{max}}}M_\text{v}\,
+    \mathrm{d}\varphi=\frac12J_F(\omega_\text{max}^2-\omega_\text{min}^2)
+    =\frac12J_F\omega_m^2\delta
+    \end{equation}
+    所确定的$\delta\leq[\delta]$，故应有
+    \begin{equation}
+    J_F=\frac{W_y}{\omega^2\delta}.
+    \end{equation}
+    \item 最大盈亏功$W_y$的确定：$M_\text{v}-\varphi$图
+    \footnote{一般为$M_\text{va}$与$M_\text{vc}$，此时应求两曲线所夹面积（即作差）。}
+    \then 能量指示图\hint{曲线包围面积}\then 最大盈亏功\hint{最值点之差}
+    \item \minor{非周期性速度波动：调速器}
+\end{itemize}
+
+\subsection{转子的动平衡与静平衡}
+\begin{itemize}\tightlist
+    \item 平衡问题的意义：减小振动\hint{包括共振}造成的危害；三类平衡问题\minor{
+    \hint{刚性转子、挠性转子、机械在基座上的平衡}}。
+    \item 临界转速$n_c$\hint{第一阶，第二阶……}
+    \item 不平衡的原因：质量中心与回转中心不平衡\hint{结构不对称、材料不均匀、制造安装
+    不准确、零件飞出、磨损、积灰、热变形……}
+    \item 两种平衡：静平衡$\sum \vec{F}_i=0$\hint{对$\frac LD\leq\frac15$的盘形件
+    最重要}与动平衡$\sum\vec{F}_i=0,\sum\vec{M}_i=0$\hint{对$\frac LD\geq\frac15$
+    的细长元件不可忽视}；关系\hint{动平衡\then 静平衡}。
+    \item 平衡原理：
+    \begin{itemize}\tightlist
+        \item 静平衡：取$m$及$\vec{r}$\hint{一般控制变量}使$m\vec{r}+\sum_im_i
+        \vec{r}_i=0$
+        \item 动平衡：若$m_1$与$m_2$分布在两平面，分别投影分解至另两个可安装的平面
+        \begin{equation}
+        \vec{F}_1=\vec{F}'_1+\vec{F}''_1,\quad \vec{F}'_1l'_1=\vec{F}''_1l''_1
+        \end{equation}
+        使动平衡问题转化为两个静平衡问题。
+    \end{itemize}
+    \item 平衡试验：
+    \begin{itemize}\tightlist
+        \item 静平衡：水平导轨上自由滚动\hint{质心在下，上方加重，直至随遇平衡得$mr$}
+        \item 动平衡：用动平衡机分析振动信号
+        \item \minor{动平衡理论：模态平衡\hint{认为各阶模态相互独立}、影响系数\hint
+        {施加不平衡量，由响应推得影响系数}……}
+    \end{itemize}
+    \item 不平衡量的表示：质径积$m_jr_j$与偏心距$e=\frac{m_jr_j}{m}$；许用不平衡量
+    $[e]$\hint{按平衡精度$A$查$[e]=\frac{1000A}\omega(\si{\micro m}$)；精度等级记号
+    G$A$，ISO标准由G0.4至G4000，对应构件类型}。
+    \item \minor{计算：静平衡直接用$[\omega]$，动平衡需分解$[\omega]m$为选定两平面上
+    质径积。}
+\end{itemize}
+
+\section{螺纹连接}
+
+\subsection{螺纹连接的基本概念}
+\begin{itemize}\tightlist
+    \item 定义：具有螺纹的零件构成的可拆连接；形成原理\hint{直角三角形绕在圆柱表面}。
+    \item 螺纹分类：内/外螺纹、形状\hint{普通螺纹、管螺纹、矩形螺纹、梯形螺纹、锯齿螺纹}
+    \minor{、米制/英制螺纹}。
+    \item 普通螺纹：$\alpha=\SI{60}{\degree}$，$\phi_v$大，分粗/细牙\hint{依据螺距
+    大小}。
+    \item \minor{管螺纹：$\alpha=\SI{55}{\degree}$，分为圆柱/圆锥管螺纹，无径向间隙
+    \hint{用于管路，可以防漏}。}
+    \item \minor{其他类型螺纹：自锁性差，传动效率高\hint{可用在丝杠机构等传动装置中}。}
+    \item 主要参数：大径$d$\hint{公称直径}、小径$d_1$、中径$d_2$、螺距$P$、线数$n$
+    \hint{一般不超过$4$}、导程$S=nP$、导程角$\psi$\hint{以$d_2$为准，可用三角形计算}、
+    牙型角$\alpha$、旋向\hint{螺旋旋入的方向，与蜗杆判法相同；右旋占主}。
+    \item 螺纹连接的类型：螺栓连接\hint{分普通[受拉]螺栓、绞制孔[受剪]螺栓}、螺钉连接
+    \hint{不经常拆卸：内螺纹受损}、双头螺柱连接\hint{可经常拆卸：仅螺母受损}、紧定螺钉
+    连接\hint{可承受一定载荷}；标准螺纹连接件。
+\end{itemize}
+
+\subsection{螺纹件的预紧}
+\begin{itemize}\tightlist
+    \item 预紧原理：装配时适当拧紧螺母/螺钉，被连接件与螺栓均受预紧力$F'$的作用
+    \hint{连接件正向受压，螺栓反向受拉}，使预紧力矩
+    \footnote{公式中，$T_1$与$T_2$分别代表螺纹副内与支撑面-螺母表面上的摩擦阻力矩，
+    $r_1\approx\frac{D_1+d_0}4$为螺纹副的当量摩擦角（$D_1$及$d_0$分别为螺母环面上的
+    外径与内径）。}
+    \begin{equation}
+    T_\Sigma=T_1+T_2=F'\tan(\psi+\phi_v)\frac{d_2}2+F'f_cr_f
+    \end{equation}
+    增大\hint{预紧太死，容易使连接件在受冲击时断裂}；\minor{测力矩扳手/定力矩扳手的
+    使用}。
+    \item \emph{预紧是针对受拉螺栓而言的，受剪螺栓不需要预紧！}
+    \item 防松措施：
+    \begin{itemize}\tightlist
+        \item 摩擦防松\hint{施加压力以维持摩擦力，可靠性差}：弹簧垫圈\hint{产生反弹
+        力，维持摩擦力}、双螺母\hint{上下产生相反压力使螺栓受拉}。
+        \item 机械元件防松\hint{固结螺母与螺栓}：开口销与六角开槽螺母\hint{需要钻孔}、
+        圆螺母用止动垫圈\hint{需要开槽}、外舌式止动垫圈\hint{需要紧定螺钉}、串联钢丝
+        \hint{用于螺栓组，拆卸不便}。
+        \item \emph{串联钢丝的绕法与螺纹旋向有关，钢丝在松动方向上应是受拉的。}
+    \end{itemize}
+\end{itemize}
+
+\subsection{单个螺栓强度计算}
+\begin{itemize}\tightlist
+    \item 螺栓载荷形式：轴向力、径向力。
+    \item 螺栓断裂情况统计：螺栓根部、螺纹根部、与螺母接合点处最易断裂\hint{应力集中、
+    受力不均、结构脆弱……}。
+    \item 设计准则：受拉螺栓保证拉伸强度；受剪螺栓保证挤压及剪切强度。
+    \item 松螺栓强度：$\sigma=\frac{4F}{\pi d_1^2}\leq[\sigma]$
+    \item 仅受预紧力$F'$时强度：按第四强度理论合成预紧力\hint{拉力}与摩擦力矩\hint{剪
+    力}，得当量应力$\sigma_v\approx1.3\sigma$，以摩擦力$mfF'$抗衡横向载荷$F_R$计算
+    $F'$后再确定$\sigma_v$
+    \footnote{公式中，$m$为接合面对数（一般为1），$f$为接合面上摩擦因数。}
+    ：
+    \begin{equation}
+    mfF'\geq F_R,\quad\sigma_v=\frac{4\times1.3F'}{\pi d_1^2}\leq[\sigma]
+    \end{equation}
+    \item \minor{用摩擦力抗衡横向载荷并不可靠，常用减载销/套/键等传递横向载荷。}
+    \item 受预紧力$F'$及轴向工作拉力$F$时强度：
+    \begin{itemize}\tightlist
+        \item \emph{螺栓受力不等于$F'+F$}！
+        \item 工作拉力$F$使螺栓受拉\hint{变形更大}，被连接件受拉\hint{变形回退}；$F$
+        太大将使连接间产生空隙。
+        \item 按相对刚度$\frac{C_1}{C_1+C_2}$\hint{可查表}合成实际所受轴向力$F_0=
+        F'+\frac{C_1}{C_1+C_2}F$与被连接件所受残余锁紧力
+        $F''=F'-\frac{C_2}{C_1+C_2}F$。
+        \item 静载荷计算：按合成的$F_0$保证$\sigma=\frac{4\times1.3F_0}{\pi d_1^2}
+        \leq[\sigma]$。
+        \item 疲劳载荷计算：工作拉力为$0\sim F$，则应力幅$\sigma_a=\frac12
+        \frac{C_1}{C_1+C_2}\frac{4F}{\pi d_1^2}\leq[\sigma_a]$，$[\sigma_a]=
+        \frac{\varepsilon K_mK_u\sigma_{-1}。}{[S]_aK_\sigma}$按一般方法查表计算
+        \footnote{公式中$K_\sigma$为螺纹制造工艺系数\hint{按$d$查}，$K_m$为螺纹制造
+        工艺系数\hint{按车制/辗制查}，$K_u$为螺纹牙受力不均系数\hint{按受拉/受压查}，
+        $[S]_a$为安全系数\hint{按预紧状况查}，$\sigma_{-1}=0.32\sigma_b$}。
+    \end{itemize}
+    \item 受剪螺栓强度：在剪力$F_s$下，挤压强度$p=\frac{F_s}{d_0L_{\text{min}}}
+    \leq[p]$，剪切强度\footnote{公式中，$d_0$为剪切面直径，$L_\text{min}$为螺纹接触
+    段最小长度。}$\tau=\frac{4F_s}{\pi d_0^2}\leq[\tau]$。
+    \item 确定$[\sigma]$：$[\sigma]=\frac{\sigma_s}{S}$，安全系数按规格、材料、载荷
+    形式、预紧方式确定。
+\end{itemize}
+
+\subsection{螺栓组强度计算}
+\begin{itemize}\tightlist
+    \item 螺栓组载荷形式：轴向载荷、径向载荷、弯矩、转矩。
+    \item 结构设计原则：
+    \begin{enumerate}\tightlist
+        \item 接合面应设计成轴对称的简单形状，并对称布置螺栓。
+        \item 受剪螺栓不应大量布置于与平行的方向上\hint{受力不均，没用}。
+        \item 承受弯矩及转矩的螺栓组，应离旋转中心尽可能远\hint{并尽量等距}。
+        \item 应给扳手留下空间。
+        \item 避免在接触面上产生偏心载荷\hint{可做出凸台、沉头座，或加斜面垫圈}。
+        \item 合理选择防松装置。
+    \end{enumerate}
+    \item 螺栓组受力分析：
+    \begin{itemize}\tightlist
+        \item 受轴向力$F_Q$：平均分担载荷$F=\frac{F_Q}{z}$。
+        \item 受横向力$F_R$：受拉螺栓平摊预紧力\hint{以产生摩擦力}$F'=
+        \frac{K_fF_R}{fmz}$\hint{其中$K_f>1$为可靠性系数}；受剪螺栓平摊剪力$F_s=
+        \frac{F_R}{z}$。
+        \item 受转矩$T$：受拉螺栓按回转距$r_i$平摊预紧力$F'=\frac{K_fT}{f(r_1+
+        \cdots+r_z)}$；受剪螺栓按变形协调条件$\frac{F_{si}}{r_i}$为常数分配剪力，最大
+        剪力$F_{s\max}$出现在最远处：
+        \begin{equation}
+        F_{s\max}r_{\max}=\frac{r_{\max}^2}{\sum r_i^2}\cdot T
+        \end{equation}
+        \item 受翻转矩$M$：按变形协调条件$\frac{F_i}{L_i}=\frac{F_{\max}}{L_{\max}}$
+        分担弯曲拉力，最大拉力出现在最远处：
+        \begin{equation}
+        F_{\max}L_{\max}=\frac{L_{\max}^2}{\sum L_i^2}\cdot M
+        \end{equation}
+        校核受力最大螺栓时应按相对刚度合成预紧力与弯曲拉力；\minor{还应校核地基接合面：
+        \begin{gather}
+        p_{\max}\approx\frac{zF'}{A}+\frac{M}{W}\leq[p]\\
+        p_{\min}\approx\frac{zF'}{A}-\frac{M}{W}>0
+        \end{gather}}
+    \end{itemize}
+    \item \emph{加高螺母不能提高连接的强度，因受力主要集中在螺纹副接触的开头段。}
+    \item 提高连接强度的措施：
+    \begin{enumerate}\tightlist
+        \item 改善螺纹牙间载荷分配，减少第一圈螺纹牙受力\hint{可采用悬置螺母、内斜螺母、
+        环槽螺母，使螺栓螺母变形同步，或平均各段载荷}。
+        \item 减小螺栓应力幅\hint{降低螺栓刚度$C_1$，如采用腰状杆螺栓、增大螺栓长度、
+        加弹性元件；或提高被连接件刚度$C_2$，如用刚性密封元件替代弹性密封元件}。
+        \item 减少应力集中\hint{增大牙根圆角半径，螺纹收尾处设退刀槽等}。
+        \item 避免附加完全应力\hint{主要是避免偏心拉}。
+        \item 采用合理的制造工艺\hint{特殊工艺处理}。
+    \end{enumerate}
+\end{itemize}
+
+\section{轴与轴系}
+\begin{itemize}\tightlist
+    \item 基本作用：支撑回转零件，传递运动与转矩。
+    \item 按承载分类：
+    \begin{itemize}\tightlist
+        \item 心轴：只承受弯矩\hint{不限制轴向转动或不转动，如滑轮主轴}。
+        \item 传动轴：只承受转矩\hint{不约束横向转动或不弯曲，如汽车发动机至后桥的轴}。
+        \item 转轴：既承受弯矩又承受转矩\hint{对弯曲与转动均有约束，最常见}。
+    \end{itemize}
+    \item 按形状分类：直轴\hint{光轴及阶梯轴}\minor{、曲轴、挠性轴}。
+\end{itemize}
+
+\subsection{轴的强度、刚度、振动强度计算}
+\begin{itemize}\tightlist
+    \item 轴的失效形式：疲劳断裂、过载断裂、刚度不足\minor{、振幅太大、磨损、蠕变}。
+    \item 强度计算：初选轴径或初步校核\hint{可按纯扭转强度或弯扭合成强度计算}。
+    \begin{itemize}\tightlist
+        \item 按纯扭转强度计算：
+        \begin{gather}
+        \tau=\frac{T}{W_p}\approx\frac{9550\times10^3\frac Pn}{0.2d^3}\leq[\tau]\\
+        d\geq\sqrt[3]{\frac{9550\times10^3}{0.2\times[\tau]}\cdot\frac Pn}=A\times
+        \sqrt[3]{\frac Pn}
+        \end{gather}
+        其中$A$为计算系数\hint{计入了弯矩影响}，可根据轴的材料查表。
+        \item 按弯扭合成强度计算：作计算简图\hint{轴承为支点}，分别作弯矩与转矩图，按第三
+        强度理论\footnote{公式中，$\alpha$为折合系数\hint{考虑循环变化}，$\delta$为实际
+        的循环特征值；对称循环下$\delta=-1$，$\alpha=1$；脉动循环下$\delta=0$，$\alpha
+        \approx0.6$；静应力下$\delta=1$，$\alpha\approx0.3$。}
+        \begin{equation}
+        M_v=\sqrt{M^2+(\alpha T)^2},\quad\alpha=\frac{[\sigma_{-1}]}{[\sigma_\delta]}
+        \end{equation}
+        合成当量弯矩，再按$\sigma_v=\frac{M_v}{W_z}\leq[\sigma]$校核，此处$[\sigma]$
+        在转轴与转动心轴上取$[\sigma_{-1}]$，对其他变化较小情况取$[\sigma_0]$。
+        \item \emph{轴上开一个键槽，轴径应增大$3\%\sim5\%$；两个键槽，增大
+        $7\%\sim10\%$。}
+    \end{itemize}
+    \item 刚度校核：
+    \begin{itemize}\tightlist
+        \item \minor{弯曲刚度：$y\leq[y]$及$\theta\leq[\theta]$\hint{用能量法或当量
+        直径计算}。}
+        \item 扭转刚度：$\varphi=\frac{584}G\sum_{i=1}^n\dfrac{T_il_i}{d_i^4}\leq
+        [\varphi]$\minor{；若含键槽，应乘以刚度降低\hint{变形增大}系数
+        $k=\frac1{1-4fh/d}$}。
+    \end{itemize}
+    \item （弯曲）振动计算：主要考虑一阶临界转速$n_{e1}$，刚性轴要求$n<0.76n_{e1}$。
+\end{itemize}
+
+\subsection{轴系设计}
+\begin{itemize}\tightlist
+    \item 设计要素：材料选择\hint{合用且经济}、结构设计\hint{轴系改错}、工作能力校核。
+    \hint{强度、刚度、振动强度}。
+    \item 常用材料：碳钢\hint{一般常用}、合金钢\hint{性能好、昂贵，应热处理}、球墨铸铁
+    及高强度铸铁\hint{耐磨吸振、易加工、便宜，用于加工形状特殊的轴}\minor{；查表选择}。
+    \item 结构设计要素：
+    \begin{enumerate}\tightlist
+        \item 受力合理、平均，有利于提高强度及刚度。
+        \item 定位准确，固定可靠\hint{常见错误}。
+        \item 便于加工、装拆、调整\hint{常见错误}。
+        \item 减少应力集中，节省材料、减轻质量。
+    \end{enumerate}
+    \item 轴端划分：轴颈\hint{与轴承配合}、轴头\hint{与齿轮、带轮等一般零件配合}、
+    轴肩/轴环\hint{轴向定位用}。
+    \item 轴系改错基本原则：固定、定位、可装拆、可靠。
+    \item \emph{轴系改错十二条：}
+    \begin{enumerate}\tightlist
+        \item 轴上各零件应完成周向或轴向固定，不能有多余自由度\hint{常见错误：轴端的
+        联轴器、带轮等零件未固定，缺键或轴端挡圈；轴端挡圈或压板直径太小}。
+        \item 阶梯轴的阶梯应当是递增或递减
+        \footnote{即使相等也不行——特别是有螺纹段与无螺纹段间。}
+        的，以便装卸\hint{常见错误：有凸出的轴环，或有下陷段}。
+        \item 轴颈、轴头的长度应略小于与之配合的零件长度\hint{可用退刀槽、砂轮越程槽
+        代替}，以便可靠地固定\hint{否则无法接触}，并利于拆卸。
+        \item 固定轴承之轴肩、轴环、套筒、圆螺母的外径应低于轴承内圈，以便用拉马拆卸。
+        \item 轴上键槽应打通，使得轴可以自由进出\footnote{键只负责周向定位，在轴向上
+        不应受到约束。}。
+        \item 正确选择轴承\hint{常见错误：选用单个圆锥、圆柱滚子轴承，不能承受轴向移动；
+        成对的轴承方向没有形成O型或X型的对称结构}。
+        \item 轴承座与端盖配合处应加工凸台，需要加密封垫圈\hint{用粗黑线表示}，并需要
+        与轴承外圈配合\footnote{若轴采用一端双向固定，一端游动的结构\hint{如在一侧加用
+        套杯}，则游动的端盖一侧不应与轴承接触。}。
+        \item 轴承配合处不需要键\hint{一般用肩、环等固定，或采用过盈配合}。
+        \item 键槽不应太长，以免键的空间位置与其他轴上零件冲突。
+        \item 轴承座剖面线应呈上下箱体结构\hint{下面和上面各一系列}，以保证同轴度
+        \hint{上下拼合}。
+        \item 锥面\hint{常来自于齿轮、蜗轮等}不能实现轴向定位。
+        \item 多个平键应位于同一母线上\hint{减少装夹时间}。
+    \end{enumerate}
+    \item 固定件的选择：
+    \begin{itemize}\tightlist
+        \item 轴端长度：轴头长度比零件轮毂宽度小$1\sim\SI{2}{mm}$；轴颈长度一般等于
+        轴承宽度；轴肩或轴环高度$h$取约$0.1d$，圆角半径$r\approx0.75d$，长度$b
+        \approx1.4h$。
+        \item 轴向固定：轴肩或轴环\hint{简单可靠，应力集中}、套筒\hint{简单可靠，不宜
+        过长，可与轴肩、环配合固定两个零件}、圆螺母\hint{装拆方便，应力集中，一般用于
+        轴端零件，应采用双螺母或止动垫圈结构}、弹性挡圈\hint{结构简单，应力集中，一般用
+        于轴承，常与轴肩配合}、轴端压板\hint{固定轴端零件，需要防转}。
+        \item 周向固定：键\hint{（普通）平键、半圆键、花键，需校核挤压强度}、紧定螺钉
+        或销钉\hint{常用于光轴，双向固定，可靠性低}、过盈配合\hint{重压需用温差法或压力
+        机装配，可靠性高，对工艺要求高，装拆不便}。
+        \item 轴对机架定位：由轴承实现。
+    \end{itemize}
+    \item 结构工艺性：结构尽可能简单\hint{如阶梯少、圆角倒角等尺寸统一}，螺纹段留出对应
+    的槽，加工精度与表面粗糙度合理选择\hint{不宜定得过高}。
+    \item 提高强度与刚度的措施：
+    \begin{enumerate}\tightlist
+        \item 合理布置零件，平均分载：输入零件应布置在轴中部或轴承附近；减少悬臂长度
+        \minor{；固结多余的转轴为心轴}。
+        \item 改进轴的结构，降低应力集中：用大圆角\minor{、加中心环、开卸荷槽，少开
+        螺纹}。
+        \item 改善轴的表面质量：减小粗糙度，表面处理。
+    \end{enumerate}
+    \item \minor{工作能力校核：安全系数法\hint{查表叠加}。}
+\end{itemize}
+
+\section{轴承}
+\begin{itemize}\tightlist
+    \item 轴承的功用：支撑轴系，减小轴与支承间的摩擦、磨损。
+    \item 两类轴承：滑动轴承\hint{抗冲击、高精度，用于低速重载、精密仪器、一般支承场合}
+    ，滚动轴承\hint{摩擦小、启动快、效率高、已标准化，用于一般机器}。
+\end{itemize}
+
+\subsection{滑动轴承}
+\begin{itemize}\tightlist
+    \item 分类：径向、止推、径向止推；液体润滑\hint{无直接接触}、非液体润滑\hint{有
+    微观上直接接触}；液体、气体、固体。
+    \item 结构组成：轴承座/轴承盖、轴套/轴瓦\hint{与轴接触}、油孔、油槽、紧固件。
+    \item 结构形式：整体式\hint{成本低；装拆不便、磨损后不可调隙}、对开式\hint{易调整，
+    应用广泛}、自动调心式\hint{补偿径向变形}。
+    \item 轴瓦设计\hint{常在表面用轴承合金加工出轴承衬}；轴瓦结构形式：整体式、对开式；
+    厚壁、薄壁；轴瓦定位：销钉定位、止动螺钉定位、凸缘定位、凸耳定位。
+    \item 油孔油槽设计原则：开在油膜压力最小处\hint{一般远离承载区}或轴承剖分面处；油槽
+    不能沿轴向完全开通\hint{避免漏油}；不允许在轴瓦承载区开槽\hint{不能降低轴承强度和
+    油膜承载能力}。
+    \item 滑动轴承失效形式：磨粒磨损、粘着磨损\hint{胶合}、疲劳磨损、腐蚀。
+    \item 轴承材料选择原则：减摩性、耐磨性、抗胶合性；嵌藏性\hint{容纳磨粒}、顺应性
+    \hint{通过弹性变形补偿偏斜}、磨合性；强度、抗腐蚀性；导热性、工艺性、经济性。
+    \item 常用轴承材料：轴承合金\hint{硬晶粒+软基体，各方面性能优良，疲劳强度低}、
+    铜合金\hint{强度和减摩、耐磨性好，磨合性及嵌藏性差，锡、铝、铅、黄四种各有所长}、
+    铸铁\hint{经济，有一定润滑作用，磨合性差，只适用于轻载低速}、多孔金属\hint{自带
+    润滑油，但不耐冲击，适用于载荷平稳、加油不便场合}、非金属材料\hint{塑料性能较好，
+    不耐热，用于常温轻载；橡胶用于水润场合}。
+    \item 工作能力计算：已知$d,n,F_r$，先根据工况确定结构形式与材料，再分别验算：
+    \begin{itemize}\tightlist
+        \item 平均压力$p=\frac{F_r}{dB}\leq[p]$\hint{抗挤压强度}；
+        \item 热载荷$pv=\leq[pv]$\hint{防胶合}；
+        \item 滑动速度$v\leq[v]$\hint{防止局部$p$及$pv$过大}。
+    \end{itemize}
+    对止推轴承，也需验算$p$及$pv$，但截面积$A$与径向轴承不同。
+    \item \emph{动压润滑条件：}
+    \begin{enumerate}\tightlist
+        \item 形成收敛楔形间隙\hint{必须有偏心距$e$}；
+        \item 接触面间充满粘性液体；
+        \item 接触面间有相对滑动\hint{必须在一定转速下才能发生润滑}。
+    \end{enumerate}
+    \item 动压润滑与静压润滑区别：初压有无，是否需要供油设备。
+    \item \minor{其他类型轴承：动静压润滑轴承、气体轴承、磁力轴承。}
+\end{itemize}
+
+\subsection{滚动轴承}
+\begin{itemize}\tightlist
+    \item 结构：外圈、内圈、滚动体\hint{球或滚子}、保持架。
+    \item 分类：按公称接触角$\alpha$，分为向心轴承\hint{$\alpha\leq\SI{45}{\degree%
+    }$，承受径向载荷}与推力轴承\hint{$\alpha>\SI{45}{\degree}$，承受轴向载荷}。
+    \item 主要性能：承载能力\hint{滚子优于球$1.5\sim3$倍}、极限转速、允许角偏差\hint%
+    {能否调心}。
+    \item 滚动轴承类别：
+    \begin{itemize}\tightlist
+        \item 调心球轴承\hint{1}：径向为主，可调心；
+        \item 调心滚子轴承\hint{2}：径向为主，可调心，可承受重载；
+        \item 圆锥滚子轴承\hint{3}：径向轴向皆可承受，外圈可分离，成对使用；
+        \item 推力球轴承\hint{5}：只受轴向，不耐高速；
+        \item 深沟球轴承\hint{6}：径向为主，最常用，价格最低；
+        \item 角接触球轴承\hint{7}：径向轴向皆可承受，$\alpha$可取\SI{15}{\degree}
+        \hint{A}、\SI{25}{\degree}\hint{AC}、\SI{40}{\degree}\hint{B}三种，成对
+        使用；
+        \item 圆柱滚子轴承\hint{N}：只受径向，外圈可分离，不可调心，耐冲击。
+    \end{itemize}
+    \item 轴承（基本）代号：类型代号-[宽度系列代号-]直径系列代号-内径代号\minor{%
+    [-内部结构代号-公差等级代号-游隙代号]}
+    \begin{itemize}\tightlist
+        \item 类型代号：见“滚动轴承类别”。
+        \item 宽度系列代号：\minor{系列为$8012345$，}一般为$0$，除调心轴承与圆锥滚子
+        轴承外均可省略。
+        \item 直径系列代号：\minor{系列为$789012345$，}不能省略。
+        \item 内径代号：$00-03$分别对应$10,12,15,\SI{17}{mm}$，$04-99$乘五即得对应
+        直径\hint{mm}，超过$\SI{500}{mm}$的用分母形式表示。
+        \item 内部结构代号：如角接触轴承的三种$\alpha$。
+        \item 公差等级代号：\minor{系列为$0(6x)6542$，}一般为$0$并省略\minor{，否则
+        应标出``/Pn''}。
+        \item 游隙代号：\minor{系列为$120345$}，一般为$0$并省略\minor{，否则应标出
+        ``/Cn''}。
+    \end{itemize}
+    \item 滚动轴承的选择依据：
+    \begin{enumerate}\tightlist
+        \item 轻载或高速宜用球轴承，冲击或重载宜用滚子轴承；能用球轴承时不要用滚子轴承
+        \hint{经济性}。
+        \item 纯径向载荷宜用向心轴承，纯轴向宜用推力轴承；同时承受径向与轴向载荷，需结
+        合两者相对大小具体考虑。
+        \item 考虑调心需求\hint{此时避免用圆柱滚子轴承}。
+        \item 整体轴承座中的轴承，优先考虑外圈可分离的\hint{便于拆卸}。
+    \end{enumerate}
+    \item 滚动轴承的载荷情况：
+    \begin{enumerate}\tightlist
+        \item 理论承载区为整个下半部分，实际承载区小于一般；附加轴向载荷有助于扩大承
+        载区\hint{预紧}。
+        \item $\alpha>0$时，总有轴向附加力$S=F_R\tan\alpha$\hint{应成对使用}。
+        \item 元件所受载荷总呈脉动循环：外圈是稳定脉动循环，内圈不稳定，滚动体上循环
+        频率最高\hint{公转+自转}。
+    \end{enumerate}
+    \item 常见失效形式：疲劳点蚀\hint{主要，脉动循环导致}；磨粒磨损、屈服失效；轴承故障
+    \hint{人为因素导致}。
+    \item 寿命校核基本概念：基本额定寿命$L_{10}$\hint{确定条件下，失效率达10\%}、基本
+    额定寿命载荷$C$\hint{确定条件下使$L_{10}$达$10^6$转}、基本额定静载荷$C_0$\hint{确定条件下使接触应力达一定值}。
+    \item 动载寿命校核：用$P=(XF_r+YF_a)f_p$折算实际情况为当量载荷$P$，用公式
+    \footnote{公式中，$\varepsilon$为寿命指数，对球轴承取$3$，滚子轴承取$10/3$。}
+    \begin{equation}
+        L_{10}=\left(\frac CP\right)^\varepsilon\times10^6
+    \end{equation}
+    核算寿命\hint{为多少转，可进一步换算为小时数}。
+    \item \minor{可查表将已算好的$L_{10}$转化为其他的$L_n$。}
+    \item \minor{静载校核条件：$C_0\geq S_0P$，$S_0$查表，$P$需根据轴承类型合成、折
+    算。}
+    \item 角接触球轴承的轴向载荷计算：
+    \begin{itemize}\tightlist
+        \item 装法：正装\hint{X型，接触法线向内，轴向附加力对内}，反装\hint{O型，
+        接触法线向外，轴向附加力对外}。
+        \item 计算原理：先做受力简图，理论上应有
+        \begin{equation}\label{eq:轴向平衡条件}
+        F_A+S_1=S_2
+        \end{equation}
+        实际上$F_a$往往偏大或偏小，此时应在
+        方程一端附加支反力$S_1'$或$S_2'$\hint{来自于支承接触面}以维持等号。
+        \item \emph{$S_1$与$S_2$由径向载荷决定，不能改变，可变的是附加支反力！}
+        \item 做校核时，实际轴向力$F_a$取方程(\ref{eq:轴向平衡条件})两侧之最大值。
+    \end{itemize}
+    \item 轴承支承方式：两端单向固定；一段双向固定、一端游动\hint{留出自由伸缩余地}；
+    两端游动\hint{便于调整，如自适应的人字齿}。
+    \item 利用调整垫片可控制游隙。
+    \item \minor{轴承固定：内圈——轴肩、弹性挡圈、轴端压板、圆螺母-止动垫圈、锥形套筒；
+    外圈——孔用挡肩、轴承端盖、弹性挡圈、外圈带止动槽-止动环。}
+    \item \minor{轴承是专门生产的标准件，不允许加工。}
+    \item 轴承装拆原则：不允许通过滚动体传力\hint{不能使内外圈错位}。
+    \item 轴承预紧：针对成对轴承较为有效；分定位预紧\hint{“形锁合”}与定压预紧\hint{%
+    “力锁合”}。
+    \item 润滑与密封：油润滑与脂润滑；\minor{润滑方式包括油浴、滴油、飞溅、喷油、油雾、
+    油气等；}密封分接触式\hint{毡圈、唇型密封圈}与非接触式\hint{间隙式、迷宫式}。
+\end{itemize} 
+
+\section{联轴器与离合器}
+\begin{itemize}\tightlist
+    \item 共性：连接两轴及轴上回转件，传递运动和转矩。。
+    \item \emph{区别：联轴器只能在停车时才能拆开；离合器可在工作中接合或分离。}
+    \item 联轴器的特殊要求：补偿轴的偏移\hint{能补偿者为挠性，否则为刚性}；吸振缓冲。
+    \item 刚性联轴器：套筒联轴器\hint{用锥销或平键连接}，凸缘联轴器\hint{配合对中，或
+    用受剪螺钉固定}。
+    \item 挠性联轴器：分无弹性元件\hint{利用可动元件配合}和有弹性元件两种。
+    \begin{itemize}\tightlist
+        \item 无弹性元件：十字滑块联轴器、齿轮联轴器\hint{耐重载}、万向联轴器
+        \hint{轴线相交}。
+        \item 有弹性元件\hint{高速、冲击适用}：弹性套柱销联轴器、弹性柱销联轴器。
+    \end{itemize}
+    \item 联轴器的选择：先初选类别，查手册，校核转矩$T_c=KT\leq[T]$\hint{含工况系数}
+    及转速$n\leq[n]$。
+    \item 离合器类别：
+    \begin{itemize}\tightlist
+        \item 嵌合式离合器：同步回转，工作可靠，有刚冲。实例：牙嵌式、齿轮式。
+        \item 摩擦式离合器：无级变速，工作平稳，不同步。实例：单盘式、多盘式。
+        \item \minor{超越式离合器：单方向传矩。实例：滚珠式、棘轮式\hint{见“棘轮机构”
+        章节}。}
+        \item \minor{安全离合器：转矩过大时分离或打滑，可保护机器。}
+    \end{itemize}
+\end{itemize}
+
+\end{document}
