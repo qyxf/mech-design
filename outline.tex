@@ -145,6 +145,56 @@
 \end{itemize}
 
 \section{工作能力与结构设计基础}
+\subsection{工作能力分析}
+\begin{itemize}\tightlist
+    \item 载荷：机械零件在工作中所受的外力；分类：静载荷；动载荷\hint{周期载荷：对称、
+    脉动、非对称；非周期载荷：准周期、瞬变；随机载荷}。
+    \item \minor{载荷的确定：类比法\hint{经验}、计算法\hint{公式}、实测法\hint{如电测}。}
+    \item 应力分类：静应力与动应力、体积应力\hint{拉压弯扭}与表面应力\hint{挤压、接触}、
+    温度应力与装配应力。
+    \item \minor{两圆柱体接触应力：$\sigma_\text{Hmax}=\sqrt{\frac F{\pi b}\cdot
+    \frac{1/\rho_\text{v}}{(1-\mu_1^2)/E_1+(1-\mu_2^2)/E_2}}$，其中$\rho_\text{v}
+    =\frac1{\rho_1}\pm\frac1{\rho_2}$为当量曲率半径\hint{正外负内}。}
+    \item 机械零件失效形式：断裂、表面破坏\hint{压溃、磨损、点蚀、胶合}、过量变形
+    \hint{刚度不足}、其他失效\hint{带打滑、螺纹松动、油膜破裂}。
+    \item 工作能力的设计计算准则：强度准则、刚度准则、耐磨性准则\hint{滑动轴承中采用}、
+    振动稳定准则\hint{轴中采用}、可靠性准则\hint{滚动轴承采用}。
+    \item 材料选用：
+    \begin{enumerate}\tightlist
+        \item 应满足零件的使用要求\hint{要可靠}。
+        \item 应满足零件的工艺要求\hint{要扛得住加工}。
+        \item 应满足经济性要求\hint{不要太贵}。
+    \end{enumerate}
+    \item 强度分类：体积强度与表面强度、静应力强度与动应力强度\hint{疲劳强度}。
+    \item 强度判断方法：许用应力法\hint{$\sigma\leq[\sigma]$}、许用安全系数法\hint%
+    {$S_\sigma=\frac{\sigma_b}{\sigma}\geq[S_\sigma]$}。
+    \item \minor{强度计算原则：简单情况直接计算；复杂情况下，塑形材料采用第三强度理论，
+    脆性材料采用第一强度理论计算当量应力；接触强度与挤压强度单独计算。}
+    \item \minor{其他知识点：疲劳强度\hint{可参见材料力学}、刚度计算\hint{具体考量}。}
+    \item \minor{摩擦：干摩擦、边界摩擦、流体摩擦、混合摩擦。}
+    \item 磨损：磨合磨损阶段\hint{急}\then 稳定磨损阶段\hint{缓}\then 剧烈磨损阶段
+    \hint{急}；设计原则：缩短磨合阶段，延长稳定阶段，推迟剧烈阶段。
+    \item 磨损分类：粘着磨损\hint{冷焊}、磨粒磨损、疲劳磨损\minor{、冲蚀磨损、腐蚀磨损}。
+    \item \emph{有磨损就有润滑，两者必须同时考虑。}
+\end{itemize}
+
+\subsection{结构设计}
+\begin{itemize}\tightlist
+    \item 结构设计的意义：为计算提供依据；确定结构尺寸。
+    \item 结构设计方法：变换
+    \begin{itemize}\tightlist
+        \item 变换结构形态：形状、位置、数目、尺寸；
+        \item 变换零件关系：运动形式\hint{滑动与滚动}、连接方式。
+    \end{itemize}
+    \item 结构设计的考虑因素：
+    \begin{enumerate}\tightlist
+        \item \minor{合理分配功能：争取一个功能载体实现多种功能。}
+        \item 提高刚度强度：等强度结构、改良截面形状\hint{工字梁}、改善受力状况\hint{
+        分载、均化}、减少应力集中\hint{增大过渡曲率半径、卸载结构}、强化与预紧。
+        \item 提高耐磨性\minor{：降低压强、脱离接触、均匀磨损、材料组合}。
+        \item 改善工艺性\minor{：考虑生产条件与批量、力求简单、易于装配}。
+    \end{enumerate}
+\end{itemize}
 
 \section{平面连杆机构}
 
