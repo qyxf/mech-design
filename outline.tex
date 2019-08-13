@@ -73,6 +73,77 @@
 \end{itemize}
 
 \section{运动设计基础}
+\subsection{构件与运动副}
+\begin{itemize}\tightlist
+    \item 机构的组成：构件\hint(运动单元体；用一条线表示)、运动副\hint{两部分保持接触、
+    形成可动连接；用不同符号表示}。
+    \item \hint{两表面不接触，就没有运动副。}
+    \item 运动副分类：
+    \begin{itemize}\tightlist
+        \item 按相对运动形式：平面运动副\hint{转动副、移动副、平面滚滑副}，空间运动副
+        \minor{\hint{螺旋副、球面副、圆柱副……}}。
+        \item 按两构件接触情况：低副\hint{面接触}、高副\hint{线接触、点接触}。
+        \item 按锁合方式：形锁合、力锁合。
+    \end{itemize}
+    \item 运动链：构件由运动副连接而成的系统；分类：开式链、闭式链
+    \hint{首尾相连；单闭环链、双闭环链……}。
+    \item 运动链成为机构的条件：有且仅有一个机架；具有确定运动规律\hint{主动件数目等于
+    自由度}。
+\end{itemize}
+
+\subsection{机构的运动简图与运动特性}
+\begin{itemize}\tightlist
+    \item 机构运动简图：简化、抽象，与实际机构具有相当的运动特性。
+    \item 机构简图绘制步骤\hint{从实物到模型}：分清构件\then 判断运动副类型\then 选择
+    视图、主动件位置，测量运动尺寸\then 绘制。
+    \item 比例尺标注示例：$\mu_l=\SI{0.001}{m/mm}$\hint{$1:1$也得这么写}。
+    \item \emph{绘图四要素：比例尺；实际尺寸；主动件；机架。\hint{不要漏项}}
+    \item \minor{不便在平面视图内绘图：轴测图、展开图、增加辅助视图平面；机动示意图
+    \hint{不严格按比例绘制}。}
+    \item 构件自由度：确定构件运动所需独立参数个数\hint{无约束平面运动：$f=3$}。
+    \item 机构自由度：机构具有的独立运动数目。
+    \begin{itemize}\tightlist
+        \item 平面低副约束$2$（$5$）个自由度，平面高副约束$1$（$4$）个自由度。
+        \item 平面机构自由度公式：$F=3n-2P_5-P_4$，其中$n=N-1$扣去机架。
+    \end{itemize}
+    \item 自由度的指导意义：设主动件数为$A$，则：
+    \begin{itemize}\tightlist
+        \item $A>F$：机构被破坏\hint{硬掰}。
+        \item $A<F$：机构无确定运动\hint{乱甩}。
+        \item $A=F$：机构具有确定运动。
+    \end{itemize}
+    \item 自由度计算时的特殊情况：
+    \begin{itemize}\tightlist
+        \item 复合铰链：$K$个构件共一转动副，等效为$K-1$个转动副。
+        \item 局部自由度：常见为滚子圆，直接「焊接」。
+        \item 虚约束：不起作用的运动副，直接去掉。
+        \begin{enumerate}\tightlist
+            \item 轨迹重合：平行四边形机构。
+            \item 多处接触：刚好两边都卡紧。
+            \item 公共约束：行星机构对称轮。
+            \item \emph{共性：相对位置较为特殊，稍偏离就不能形成运动副，或过约束。}
+        \end{enumerate}
+        \item 公共约束：常见为平面楔块机构，公式改为$F=2n-P_5$。
+    \end{itemize}
+    \item 速度瞬心：两构件上瞬时绝对速度相等的某点，可变化。
+    \begin{itemize}\tightlist
+        \item 绝对瞬心：两构件之一为机架\hint{瞬时静止点，如无滑滚动接触点}。
+        \item 相对瞬心：两构件均运动。
+    \end{itemize}
+    \item 机构中瞬心总数目：$K=\binom{2}{N}=\frac{N(N-1)}2$\hint{$N$含机架}。
+    \item 基本运动副瞬心：
+    \begin{itemize}\tightlist
+        \item 转动副：转动中心。
+        \item 移动副：垂直导路方向的无穷远处\hint{需记为$P_{12}^\infty$}。
+        \item 平面滚滑副：在过接触点的公法线上，待定。
+    \end{itemize}
+    \item 三心定理：互作平面运动的三构件之三瞬心在同一直线上\hint{固定一构件，则两运动构件之瞬心速度受两个转动方向调制}；利用三心定理可分析机构中所有
+    瞬心。%???
+    \item 用瞬心分析速度：利用瞬心处速度相等条件列等式，求解未知量。\emph{标注方向。}
+    \item \emph{计算速度时，一定要将比例尺代入，不可省略。}
+    \item \emph{如果瞬心「不在」构件上，就假象构件的实体部分延伸自此，从而可计算速度。}
+    \item 计算规范：理论依据\hint{公式}\then 原始数据\hint{代值}\then 计算结果。
+\end{itemize}
 
 \section{工作能力与结构设计基础}
 
