@@ -525,8 +525,7 @@
     \item 轮齿受力分析：常将载荷简化为「作用在齿宽中点的集中力」，分解为圆周力 $F_t=
     2000\frac{T_1}{d}$ \hint{$T_1=9550\frac{P}{n_1}$ 为齿轮转矩，$d_1$ 为节圆直径}
     与径向力 $F_r=F_t\tan\alpha$。二者合成即为名义载荷 $F_n$。
-    \item 计算准则：主要针对折断\hint{弯曲疲劳强度}、点蚀\hint{接触疲劳强度}、胶合\hint{
-    热平衡计算}。
+    \item 计算准则：主要针对折断\hint{弯曲疲劳强度}、点蚀\hint{接触疲劳强度}。
     \begin{itemize}\tightlist
         \item 弯曲疲劳强度：假设全部载荷作用于齿顶\hint{保守假设}，用「\SI{30}\degree
         切线法」
@@ -580,12 +579,223 @@
 \end{itemize}
 
 \section{蜗杆传动}
+\begin{itemize}\tightlist
+    \item 蜗杆传动由齿轮传动演化而来。
+    \item 蜗杆传动的组成：蜗杆（1）与蜗轮（2），一般蜗杆主动\hint{减速传动}。
+    \item 优点：传动比高；重合度大，传动平稳；具有自锁效应，可防止逆行。
+    \item 缺点：传动效率低，发热严重；成本高\hint{蜗轮常用青铜制造，是贵重金属}。
+    \item 一般置于系统的高速级，用于第一轮减速、传递中小功率。可用作分度机构
+    \hint{高传动比}。
+\end{itemize}
 
 \subsection{蜗杆传动基本概念}
+\begin{itemize}\tightlist
+    \item 蜗杆传动的分类\hint{按蜗杆外廓}：圆柱蜗杆\hint{最常见}\minor{、环面蜗杆、
+    锥蜗杆\hint{后两者重合度高，传动更平稳}}。
+    \item 蜗杆与蜗轮分左旋与右旋，右旋居多；只有同旋向才能配合。
+    \item 普通圆柱蜗杆分类：阿基米德蜗杆\hint{易于制造；磨削困难，精度较低}、渐开线蜗杆
+    \hint{可以磨削，用于高精度传动}、法向直廓蜗杆\hint{不易磨削}、锥面包络蜗杆\hint{用
+    展成法铣制而成，便于磨削}。
+    \item 空间方位标记：轴向为 $a$，法向为 $n$，端面或周向为 $t$。
+    \item 蜗杆基本几何参数：螺旋角 $\beta_1,\beta_2$；导程角 $\gamma=\SI{90}\degree
+    -\beta_1$；模数 $m$ 与压力角 $\alpha$
+    \footnote{蜗轮、蜗杆应满足正确啮合条件，即应具有相同的模数与压力角，具体到中间平面上，
+    是蜗杆的轴面模数 $m_{a1}$、轴向压力角 $\alpha_{a1}$ 与蜗轮的端面模数 $m_{t2}$、
+    端面压力角 $\alpha_{t2}$ 对应相等。}；蜗杆头数 $z_1$\hint{螺旋线条数}与蜗轮齿数
+    $z_2$；蜗杆分度圆直径 $d_1$ 与蜗轮分度圆直径 $d_2$；中心距 $a$。
+    \begin{itemize}\tightlist
+        \item 对于阿基米德蜗杆，法向压力角 $\alpha_n=\SI{20}\degree$ 已标准化，轴向压
+        力角按 $\tan\alpha_n=\frac{\tan\alpha_n}{\cos\gamma}$ 计算。
+        \item 因效率、制造难度等因素，蜗杆头数 $z_1$ 一般取 1、2、4、6。
+        \item $z_2$ 一般取 32 -- 80，不宜过高\hint{分度传动除外}。
+        \item 轴向齿距 $p_a$ 与导程 $p_z$：$p_z=z_1p_a$。
+        \item 螺旋线关系：$d_1=m\frac{z_1}{\tan\gamma}$。
+        \item 蜗杆直径系数 $q=\frac{d_1}{m}$：将蜗杆直径按模数标准化，不一定为整数。
+        \item 中心距可按 $a=\frac12(d_1+d_2)=\frac12(q+z_2)m$ 折算为模数。
+    \end{itemize}
+    \item 蜗杆转动传动比：$i=\frac{\omega_1}{\omega_2}=\frac{d_2}{d_1}$\hint{蜗杆
+    主动时为减速传动}。
+    \item 转向判定\hint{对蜗轮蜗杆均适用}：判断旋向\hint{顺着轴看，谁高向谁旋}\then
+    采用对应的「左/右手准则」\then 大拇指所指方向的反向为速度方向\then 进而确定转向。
+\end{itemize}
 
-\subsection{蜗杆传动的设计与分析}
+\subsection{蜗杆传动的受力与传动分析}
+\begin{itemize}\tightlist
+    \item 齿面间的相对滑动：$v_s=\sqrt{v_1^2+v_2^2}$，其中 $v_1$ 与 $v_2$ 分别为蜗杆的
+    径向与周向速度\hint{$\frac{v_2}{v_1}=\tan\gamma$}；可导致磨损与胶合。
+    \item \emph{由于 $v_s$ 的存在，传动比 $i\neq\frac{d_2}{d_1}$。}
+    \item 受力分析：载荷 $F_n$ 可分为两个轴向力、两个法向力、两个周向力，对应相等：
+    \begin{gather}
+    F_{t1}=F_{a2}\minor{=F_n\cos\alpha_n\sin\gamma+fF_n\cos\gamma}
+    =\frac{2000T_1}{d_1}\quad\text{（互为反作用力）}\\
+    F_{a1}=F_{t2}\minor{=F_n\cos\alpha_n\cos\gamma-fF_n\sin\gamma}
+    =\frac{2000T_2}{d_2}\quad\text{（互为反作用力）}\\
+    F_{r1}=F_{r2}=F_n\sin\alpha_n\approx F_{a1}\tan\alpha
+    \end{gather}
+    其中 $T_1$ 与 $T_2$ 为两构件上的转矩，满足 $T_2=T_1i\eta_1$\hint{$\eta_1$ 为啮合效
+    率}。\minor{只有已知 $T_1$ 与 $T_2$ 后才能确定所有的力。}
+    \item 受力方向分析：
+    \begin{itemize}\tightlist
+        \item 径向力 $F_r$：均指向各自的轴心。
+        \item 周向力 $F_t$：主动件周向力阻碍转动\hint{受从动件阻力}，从动件周向力推动
+        转动\hint{被主动件推动}。
+        \item 轴向力 $F_a$：按对应反作用力\hint{对方周向力}方向取反；\minor{对于主动
+        件，其轴向力也可按「左/右手定则」确定\hint{从动件的则与「定则」结果相反}}。
+    \end{itemize}
+    \item 啮合效率 $\eta_1$ 与摩擦角：按功率分析有
+    \begin{equation}
+    \eta_1=\frac{F_{t2}v_2}{F_{t1}v_1}=\frac{\tan\gamma}{\tan(\gamma+\phi_v)}
+    \end{equation}
+    其中 $\phi_v=\tan\left(f/\cos\alpha\right)=\tan f_v$ 称为当量摩擦角，$f_v$
+    称为当量摩擦因数；均可按材料和 $v_s$ 的值查表获得。
+    \item 效率 $\eta_1$ 与 $\gamma$、$f_v$ 的关系：
+    \begin{itemize}\tightlist
+        \item $\eta_1$ 关于 $\gamma$ 先升后降，一般取 $\gamma<\SI{30}\degree$；
+        \item $\eta_1$ 与 $f_v$ 反相关，故应尽量降低当量摩擦因数。
+    \end{itemize}
+    \item \emph{$v_s$ 增大时，润滑油可充分扩散，进而使 $f_v$ 与 $\phi_v$下降，因此蜗
+    杆常用于高速级以提高效率。布置在高速级还使同功率下受力降低，进而减小尺寸、节省材料。}
+    \item 自锁现象：蜗轮主动时，两构件周向力之比可算得为 $F_{t1}/F_{t2}=\tan(\gamma-
+    \phi_v)$，当 $\gamma\leq\phi_v$ 时意味着主动件不能驱动从动件，达成自锁\hint{此时
+    $\eta_1<0.5$，不宜传动}。
+    \item 蜗杆传动总效率：$\eta=\eta_1\eta_2\eta_3$
+    \begin{itemize}
+        \item $\eta_2$ 与轴承中摩擦的损耗相关，对每对滚动轴承取 0.99 -- 0.995，对每对
+        滑动轴承取 0.97 -- 0.99。
+        \item $\eta_3$ 与搅油\hint{润滑油}损耗相关，一般取 0.98.
+        \item 一般常用 $\eta=(100-3.5\sqrt{i})\%$ 事先估计，以便分析和设计。
+    \end{itemize}
+\end{itemize}
+
+\subsection{蜗杆传动设计}
+\begin{itemize}\tightlist
+    \item 蜗杆传动的失效形式：与齿轮传动类似，一般蜗轮轮齿首先失效；蜗轮齿面的胶合、磨
+    损、点蚀居多。
+    \item 设计准则：与齿轮类似，考虑齿面接触强度 $[\sigma_H]$ \hint{点蚀}与齿根弯曲
+    强度 $[\sigma_F]$ \hint{疲劳折断}，以及热平衡计算\hint{胶合}。
+    \begin{itemize}\tightlist
+        \item 闭式传动：按 $[\sigma_H]$ 设计，按 $[\sigma_F]$ 校核，要做热平衡计算。
+        \item 开式传动：只考虑 $[\sigma_F]$。
+    \end{itemize}
+    \item 材料搭配：一硬一软\hint{减摩性好}，一般用钢制蜗杆与青铜蜗轮。
+    \begin{itemize}\tightlist
+        \item \minor{蜗杆材料：优质碳素钢、合金钢等。}
+        \item \minor{蜗轮材料：铸锡青铜\hint{性能最好，易加工，价格贵}、铸铝铁青铜
+        \hint{性能一般，强度高，价格低}、灰铸铁\hint{成本低，可用在低速或大尺寸场合}。}
+    \end{itemize}
+    \item 减摩性与减磨性的区别：前者针对一对材料，后者针对一种材料。
+    \item 强度设计与校核：设计时的 $m^2d_1$ 为辅助量，在查表选取标准值时可用。
+    \begin{itemize}\tightlist
+        \item 接触强度：校核公式为
+        \begin{equation}
+        \sigma_H=15900\sqrt{\frac{KT_2}{m^2d_1z_2^2}}\leq[\sigma_H]
+        \end{equation}
+        \minor{其中的 15900 针对铸锡青铜，对铸铝铁青铜与灰铸铁应分别换成 16400 与
+        16600。}$K$ 为载荷系数，与蜗轮速度正相关；平稳时取 1 -- 1.25，波动时取 1.2
+        -- 1.4。设计公式为
+        \begin{equation}
+        m^2d_1\geq\left(\frac{15900}{z_2[\sigma_H]}\right)^2KT_2.
+        \end{equation}
+        \item 弯曲强度：校核公式为
+        \begin{equation}
+        \sigma_F=\frac{2000KT_2}{d_1d_2m\cos\gamma}\leq[\sigma_F],
+        \end{equation}
+        设计公式为
+        \begin{equation}
+        m^2d_1\geq\frac{2000KT_2Y_{Fa2}}{z_2[\sigma_F]\cos\gamma}.
+        \end{equation}
+        其中的齿形系数 $Y_{Fa2}$ 可按当量齿数 $z_{v2}=\frac{z_2}{\cos^3\gamma}$
+        查表。
+        \item 热平衡计算：验算温升
+        \begin{equation}
+        \Delta t=\frac{1000P(1-\eta)}{K_tA}\leq[\Delta t]
+        \end{equation}
+        其中 $P$ 为功率，$A$ 为散热面积\hint{一般估计为散热片表面积的一半}，$K_t$ 为
+        散热系数\hint{ 一般取 10 -- \SI{17}{J/(n^2.s.\celsius)}}；许用温升 $[\Delta
+        t]$ 为 30 -- \SI{40}\celsius，且油温应小于 \SI{80}\celsius。
+    \end{itemize}
+    \item 强度条件确定：
+    \begin{itemize}\tightlist
+        \item 许用接触应力 $[\sigma_H]$：对低强度青铜蜗轮，根据接触应力循环次数 $N_H$
+        确定：$[\sigma_H]=[\sigma_{H0}]\sqrt[8]{10^7/N_H}$，$[\sigma_{H0}]$ 为
+        基本许用接触应力。\minor{$N_H$ 的下限取 $2.6\times10^5$，上限取 $25\times
+        10^7$。}对高强度青铜，直接根据 $v_s$ 查表。
+        \item 许用弯曲应力：根据弯曲应力循环次数 $N_F$ 确定：$[\sigma_F]=[\sigma_{F0}]
+        \sqrt[9]{\frac{10^6}{N_F}}$，$[\sigma_{F0}]$ 为基本许用弯曲应力。\minor{
+        $N_F$ 的下限取 $10^5$，上限取 $25\times10^7$。}
+    \end{itemize}
+    \item 蜗杆结构：直径较小时，做成一体的蜗杆轴；直径较大\hint{$d_{f1}/d\geq1.7$}
+    时分别制造。
+    \item \minor{蜗轮结构：齿圈式、螺栓连接式、整体式、镶铸式。}
+    \item \minor{蜗杆的冷却手段：增设散热片\hint{沿气流方向设置}；在蜗杆轴上安装风扇；
+    在箱体油池内安装蛇形冷却水管等。}
+\end{itemize}
 
 \section{轮系}
+\begin{itemize}\tightlist
+    \item 轮系的分类：定轴轮系\hint{所有齿轮轴都固定于机架}、周转轮系\hint{至少一个齿
+    轮轴不固定}、混合轮系\hint{前二者的组合}。
+    \item 平面定轴轮系\hint{轴线相互平行}与空间定轴轮系\hint{一般含锥齿轮、蜗杆传动}。
+    \item \emph{周转轮系与混合轮系在实质上不能算作两类，只是层次上的划分。}
+    \item 常见概念：双联齿轮\hint{两个齿轮同轴固结而成的构件}、惰轮\hint{同时与两个齿
+    轮啮合，只改变速度方向}。
+    \item 轮系分析的主要目的：
+    \begin{itemize}
+        \item 弄清轮系中各部分的传动比\hint{大小、方向}；
+        \item 分析轮系的运动规律\hint{由对传动比的分析实现}。
+    \end{itemize}
+\end{itemize}
+
+\subsection{定轴轮系}
+\begin{itemize}\tightlist
+    \item 箭头标注规则：
+    \begin{enumerate}\tightlist
+        \item 平行轴外啮合齿轮：箭头方向相反。
+        \item 平行轴内啮合齿轮：箭头方向相同。
+        \item 锥齿轮：箭头同时朝内或朝外。
+        \item 蜗杆传动：按蜗杆传动的方法分析。
+    \end{enumerate}
+    \item 对平面定轴轮系，以及输入、输出轴平行的轮系，可用传动比中正负号表示输入与输出
+    速度的方向是否相同。
+    \item 传动比大小的计算通式：
+    \begin{equation}
+    |i_\text{主,从}|=\left|\frac{n_\text{主}}{n_\text{从}}\right|=\frac{\text{各
+    从动轮齿数连乘积}}{\text{各主动轮齿数连乘积}}
+    \end{equation}
+\end{itemize}
+
+\subsection{周转轮系与混合轮系}
+\begin{itemize}\tightlist
+    \item 概念：太阳轮/中心轮\hint{轴线固定}、行星轮\hint{轴线不固定}、行星架/系杆
+    \hint{连接太阳轮与行星轮之轴}。
+    \item \emph{每个周转轮系中有且仅有一个行星架，可通过行星架的数量确定周转轮系数量。}
+    \item 常见周转轮系：行星轮系\hint{$F=1$}、差动轮系\hint{$F=2$}。
+    \item 周转轮系的速度分析：「反转法」\hint{与凸轮机构有所相似}
+    \begin{itemize}\tightlist
+        \item 给系统附加反向的 $-n_H$，此时行星架固定下来，行星轮仅有自转，转化为一个
+        定轴轮系\hint{原有轮系的转化轮系}；
+        \item 传动比应改写为
+        \begin{equation}
+        i_'{12}=\frac{n_1^H}{n_2^H}=\frac{n_1-n_2}{n_2-n_H}=-\frac{z_2}{z_1}
+        \end{equation}
+        在若干参数已知时可由此方程解出其他参数。
+        \item 转化轮系中的速度箭头应用虚线表示，实际方向应根据计算结果确定
+        \footnote{类似于力学与电路分析中的参考/假想方向、实际方向之关系}。
+    \end{itemize}
+    \item 混合轮系分析流程：分解轮系为若干基本轮系\hint{通过行星轮对应的行星架确定}\then
+    分别分析，列出方程\then 联立求解。
+    \item 轮系的功用：
+    \begin{enumerate}\tightlist
+        \item 实现较远距离的传动。
+        \item 逐级叠加，获得较大传动比。
+        \item 通过轮系的组合，实现变速与换向。
+        \item 运动分解与合成\hint{运算}。
+        \item 实现分路传动\hint{用一个原动机实现多重运动}。
+        \item 实现特殊的运动轨迹\hint{旋轮线，包括椭圆、内摆线、纽扣线等}。
+    \end{enumerate}
+    \item \minor{「新型」轮系：RV 减速器、谐波齿轮传动等。}
+\end{itemize}
+
 
 \section{带传动}
 \begin{itemize}\tightlist
