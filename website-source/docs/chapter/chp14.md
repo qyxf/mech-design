@@ -1,0 +1,118 @@
+机械系统动力学
+==============
+
+-   三大问题：机械真实运动；飞轮调节波动；转子平衡问题。
+
+-    原理部分：设计的灵魂。
+
+-    现代设计方法：以动力学设计囊括静态设计。
+
+机械真实运动分析
+----------------
+
+-   作用在机械上的力： 重力、惯性力、约束反力、摩擦力、驱动力、工作阻力
+    [^6]
+
+-   力的机械特性：力--运动参数[（机械特性曲线）]{.sans-serif}
+
+-   常见机械特性：
+
+    -   驱动力：常数[（液压活塞）]{.sans-serif}、位置函数[（内燃机）]{.sans-serif}、速度函数[（电动机）]{.sans-serif}
+
+    -   工作阻力：常数[（起重机）]{.sans-serif}、位置函数[（压缩机）]{.sans-serif}、速度函数[（鼓风机、离心泵）]{.sans-serif}、时间函数[（破碎机）]{.sans-serif}。
+
+    -    特性的确定：其他课程中解决。
+
+-   机械运动的阶段[（三个）]{.sans-serif}：启动、稳定运动[（主动件保持常速或周期波动------
+    匀速稳定运动、变速稳定运动）]{.sans-serif}、停车；正常工作速度
+
+-   功能分析：$W_a-W_c=\frac12\Delta\sum(m_iv_{c_i}^2+J_{c_i}\omega^2)$；
+    分阶段情况[（$W_a-W_c>0$$\to$$=0$$\to$$<0$）]{.sans-serif}。
+
+-   等效动力学模型：等效构件、等效力[（或力矩）]{.sans-serif}、等效质量[（或转动惯量）]{.sans-serif}；
+    分析方法：功率相等原则、动能相等原则；其他事项[（常将$F_a$与
+    $F_c$分开分析）]{.sans-serif}。 $$\begin{gathered}
+        \left\{
+        \begin{aligned}
+        F_\text{v}&=\sum_iF_i\frac{v_i\cos\alpha_i}{v}+\sum_i\left(\pm M_i\frac%
+        {\omega_i}{v}\right)\\
+        m_\text{v}&=\sum_i\left[m_i\left(\frac{v_{c_i}}{v}\right)^2+J_{c_i}\left(
+        \frac{\omega_i}{v}\right)^2\right]
+        \end{aligned}\right.\\\left\{
+        \begin{aligned}
+        M_\text{v}&=\sum_iF_i\frac{v_i\cos\alpha_i}{\omega}+\sum_i\left(\pm M_i
+        \frac{\omega_i}{\omega}\right)\\
+        J_\text{v}&=\sum_i\left[m_i\left(\frac{v_{c_i}}{\omega}\right)^2+J_{c_i}\left(
+        \frac{\omega_i}{\omega}\right)^2\right]
+        \end{aligned}\right.
+        \end{gathered}$$
+
+-   等效分析的结果[（速度比的函数，仅与位置有关；不等于简单的求和 ，除非
+    ......）]{.sans-serif}。
+
+-   等效分析的意义：使系统仅剩一个自由度，便于求解。
+    $$F_\text{v}=m_v\frac{\mathrm{d}v}{\mathrm{d}t}$$
+
+速度波动与飞轮设计
+------------------
+
+-   调速原理：增大构件的质量或转动惯量$\to$安装飞轮[（起水库之用）]{.sans-serif}；飞轮的
+    影响[（降低速度波动幅值、减少原动机输出功率；延长启动与制动时间）]{.sans-serif}。
+
+-    **一般将飞轮装在高速轴上，可减轻飞轮的质量及尺寸。**
+
+-   平均角速度$\omega_m$：实际平均角速度[（积分平均）]{.sans-serif}与算术平均角速度；不均匀
+    系数$\delta=\frac{\omega_\text{max}-\omega_\text{min}}{\omega_\text{m}}$及
+    许用不均匀系数$[\delta]$[（大致量级；利用$[\delta]$反求速度波动许可值）]{.sans-serif}
+
+-   飞轮设计原理：计算$J_F\approx J_\text{v}$[（飞轮比机械自身转动惯量大
+    很多）]{.sans-serif}，保证由
+    $$W_y=\int_{\varphi_{E_\text{min}}}^{\varphi_{E_\text{max}}}M_\text{v}\,
+        \mathrm{d}\varphi=\frac12J_F(\omega_\text{max}^2-\omega_\text{min}^2)
+        =J_F\omega_m^2\delta$$ 所确定的$\delta\leq[\delta]$，故应有
+    $$J_F=\frac{W_y}{\omega_\text{m}^2\delta}.$$
+
+-   最大盈亏功$W_y$的确定：$M_\text{v}-\varphi$图 [^7]
+    $\to$能量指示图[（曲线包围面积）]{.sans-serif}$\to$最大盈亏功[（最值点之差）]{.sans-serif}
+
+-    非周期性速度波动：调速器
+
+转子的动平衡与静平衡
+--------------------
+
+-   平衡问题的意义：减小振动[（包括共振）]{.sans-serif}造成的危害；三类平衡问题
+    [（刚性转子、挠性转子、机械在基座上的平衡）]{.sans-serif}。
+
+-   临界转速$n_c$[（第一阶，第二阶......）]{.sans-serif}
+
+-   不平衡的原因：质量中心与回转中心不平衡[（结构不对称、材料不均匀、制造安装
+    不准确、零件飞出、磨损、积灰、热变形......）]{.sans-serif}
+
+-   两种平衡：静平衡$\sum \vec{F}_i=0$[（对$\frac LD\leq\frac 15$的盘形件
+    最重要）]{.sans-serif}与动平衡$\sum\vec{F}_i=0,\sum\vec{M}_i=0$[（对$\frac LD\geq\frac 15$
+    的细长元件不可忽视）]{.sans-serif}；关系[（动平衡$\to$静平衡）]{.sans-serif}。
+
+-   平衡原理：
+
+    -   静平衡：取$m$及$\vec{r}$[（一般控制变量）]{.sans-serif}使$m\vec{r}+\sum m_i
+                \vec{r}_i=0$
+
+    -   动平衡：若$m_1$与$m_2$分布在两平面，分别投影分解至另两个可安装的平面
+        $$\vec{F}_1=\vec{F}'_1+\vec{F}''_1,\quad \vec{F}'_1l'_1=\vec{F}''_1l''_1$$
+        使动平衡问题转化为两个静平衡问题。
+
+-   平衡试验：
+
+    -   静平衡：水平导轨上自由滚动[（质心在下，上方加重，直至随遇平衡得$mr$）]{.sans-serif}
+
+    -   动平衡：用动平衡机分析振动信号
+
+    -   
+        动平衡理论：模态平衡[（认为各阶模态相互独立）]{.sans-serif}、影响系数[（施加不平衡量，由响应推得影响系数）]{.sans-serif}......
+
+-   不平衡量的表示：质径积$m_jr_j$与偏心距$e=\frac{m_jr_j}{m}$；许用不平衡量
+    $[e]$[（按平衡精度$A$查$[e]=\frac{1000A}\omega(\si{\micro m}$)；精度等级记号
+    G$A$，ISO标准由G0.4至G4000，对应构件类型）]{.sans-serif}。
+
+-    计算：静平衡直接用$[\omega]$，动平衡需分解$[\omega]m$为选定两平面上
+    质径积。
