@@ -2,7 +2,7 @@
 
 本提纲整理于 2019 年 6 月至 8 月间，其时作者正在美国交流，面临回国后立即补考的压力，因此硬着头皮把《机械设计基础》课本从头至尾看了两遍，并整理了此份提纲。
 
-初版采用 $\mathrm{\LaTeX}$ 整理（参见[代码仓库](https://github.com/qyxf/mech-design)下 `tex-source` 目录），后重新用 Teadocs 工具整理了转换后的 Markdown 稿件，遂有此在线站点。
+初版采用 $\mathrm{\LaTeX}$ 整理（参见[代码仓库](https://github.com/qyxf/mech-design)下 `tex-source` 目录），后重新用 [Teadocs 工具](http://docs.teadocs.cn/)整理了转换后的 Markdown 稿件，遂有此在线站点。
 
 内容方面，现在最大的问题是缺少图示，需在以后加入。使用此提纲时，多参考课本，并以课本为主。
 

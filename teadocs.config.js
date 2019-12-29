@@ -5,9 +5,10 @@ module.exports = {
   doc: {
     name: "机械设计基础提纲",
     description: "机械设计基础提纲 | 钱院学辅出品",
+    author: 'xjtu-blacksmith',
     version: "2019W",
-    dir: "",
-    outDir: "",
+    dir: "source",
+    outDir: "docs",
     staticDir: ""
   },
   theme: {

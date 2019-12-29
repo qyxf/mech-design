@@ -13,6 +13,6 @@
 - [第十五章：螺纹连接](/chapter/chp15)
 - [第十六章：轴与轴系](/chapter/chp16)
 - [第十七章：轴承](/chapter/chp17)
-- [第十八章：联轴器与离合器](/chapter/18)
+- [第十八章：联轴器与离合器](/chapter/chp18)
 - +附录
   - [附录一：考试内容整理](/appendix/app1)

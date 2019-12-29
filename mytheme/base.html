@@ -22,10 +22,11 @@
     <script src="https://cdn.bootcss.com/mathjax/2.7.6/latest.js"></script>
     <script type="text/x-mathjax-config">
     MathJax.Ajax.config.path["mhchem"] = "https://cdn.bootcss.com/mathjax-mhchem/3.3.2";
+    MathJax.Ajax.config.path['siunitx']  = 'http://rawgit.com/burnpanck/MathJax-siunitx/master/';
     MathJax.Hub.Config({
-      extensions: ["tex2jax.js"],
+      extensions: ["tex2jax.js", "[siunitx]/siunitx.js"],
       jax: ["input/TeX", "output/HTML-CSS"],
-      TeX: { extensions: ["[mhchem]/mhchem.js"] },
+      TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "[mhchem]/mhchem.js", "sinuitx.js"] },
       tex2jax: {
         inlineMath: [ ['$','$'], ["\\(","\\)"] ],
         displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
@@ -47,7 +48,8 @@
         <div class="tea-menu">
             <div class="tea-menu-title">
                 <i class="fa fa-home" aria-hidden="true"></i>
-                <span><%- __DOC_NAME__ %></span>
+                <span><%- __DOC_NAME__ %></span><br>
+                <span><a href="https://qyxf.site">钱院学辅</a> 出品</span><br>
             </div>
             <div class="tea-menu-search-warp">
                 <i class="fa fa-search"></i>
